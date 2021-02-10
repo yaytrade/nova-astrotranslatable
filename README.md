@@ -1,6 +1,6 @@
 # Nova Astrotomic Translatable
 
-This [Laravel Nova](https://nova.laravel.com) field allows you to make any input field `astrotomic/laravel-translatable` compatible and localisable.
+This [Laravel Nova](https://nova.laravel.com) field allows you to make any input field [astrotomic/laravel-translatable](https://github.com/astrotomic/laravel-translatable) compatible and localisable.
 
 It is made from a fork from [Optimist Digital's](https://github.com/optimistdigital) [Laravel Nova Translatable](https://github.com/optimistdigital/nova-translatable) field, which is tailored for the Spatie Laravel Translatable package - so huge thanks to them, 99% of the work was made by them!
 
@@ -15,7 +15,6 @@ It is made from a fork from [Optimist Digital's](https://github.com/optimistdigi
 - **Supports default validation automatically**
 - **Simple to implement** with minimal code changes (after `astrotomic/laravel-translatable` support)
 - Locale tabs to switch between different locale values of the same field
-- Supports [nova-settings](https://github.com/optimistdigital/nova-settings) package
 
 ## Known non-working fields
 
