@@ -1,6 +1,8 @@
 # Nova Astrotomic Translatable
 
-This [Laravel Nova](https://nova.laravel.com) allows you to make any input field `astrotomic/laravel-translatable` compatible and localisable.
+This [Laravel Nova](https://nova.laravel.com) field allows you to make any input field `astrotomic/laravel-translatable` compatible and localisable.
+
+It is made from a fork from [Optimist Digital's](https://github.com/optimistdigital) [Laravel Nova Translatable](https://github.com/optimistdigital/nova-translatable) field, which is tailored for the Spatie Laravel Translatable package - so huge thanks to them, 99% of the work was made by them!
 
 ## Requirements
 
@@ -13,7 +15,6 @@ This [Laravel Nova](https://nova.laravel.com) allows you to make any input field
 - **Supports default validation automatically**
 - **Simple to implement** with minimal code changes (after `astrotomic/laravel-translatable` support)
 - Locale tabs to switch between different locale values of the same field
-- **Double click** on a tab to switch all fields to that locale
 - Supports [nova-settings](https://github.com/optimistdigital/nova-settings) package
 
 ## Known non-working fields
@@ -37,13 +38,13 @@ This [Laravel Nova](https://nova.laravel.com) allows you to make any input field
 
 ## Installation
 
-Firstly, set up [spatie/laravel-translatable](https://github.com/spatie/laravel-translatable).
+Firstly, set up [astrotomic/laravel-translatable](https://github.com/astrotomic/laravel-translatable).
 
 Install the package in a Laravel Nova project via Composer:
 
 ```bash
 # Install nova-translatable
-composer require optimistdigital/nova-translatable
+composer require kraenkvisuell/nova-astrotranslatable
 
 # Publish configuration (optional, but useful for setting default locales)
 php artisan vendor:publish --tag="nova-translatable-config"
@@ -122,6 +123,7 @@ php artisan vendor:publish --tag="nova-translatable-config"
 ## Credits
 
 - [Tarvo Reinpalu](https://github.com/Tarpsvo)
+- [Optimist Digital](https://github.com/optimistdigital)
 
 ## License
 
