@@ -1,6 +1,6 @@
 {
   "name": "kraenkvisuell/nova-astrotranslatable",
-  "description": "A Astrotomic Translatable extension for Laravel Nova.",
+  "description": "An Astrotomic Translatable extension for Laravel Nova.",
   "keywords": [
     "laravel",
     "nova",
