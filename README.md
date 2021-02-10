@@ -1,20 +1,17 @@
-# Nova Translatable
+# Nova Astrotomic Translatable
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/optimistdigital/nova-translatable.svg?style=flat-square)](https://packagist.org/packages/optimistdigital/nova-translatable)
-[![Total Downloads](https://img.shields.io/packagist/dt/optimistdigital/nova-translatable.svg?style=flat-square)](https://packagist.org/packages/optimistdigital/nova-translatable)
-
-This [Laravel Nova](https://nova.laravel.com) allows you to make any input field `spatie/laravel-translatable` compatible and localisable.
+This [Laravel Nova](https://nova.laravel.com) allows you to make any input field `astrotomic/laravel-translatable` compatible and localisable.
 
 ## Requirements
 
 - `laravel/nova: ^2.9 || ^3.0`
-- `spatie/laravel-translatable: ^4.0`
+- `astrotomic/laravel-translatable: ^11.0`
 
 ## Features
 
 - **Supports almost all fields** (including third party ones)
 - **Supports default validation automatically**
-- **Simple to implement** with minimal code changes (after `spatie/laravel-translatable` support)
+- **Simple to implement** with minimal code changes (after `astrotomic/laravel-translatable` support)
 - Locale tabs to switch between different locale values of the same field
 - **Double click** on a tab to switch all fields to that locale
 - Supports [nova-settings](https://github.com/optimistdigital/nova-settings) package
@@ -22,10 +19,6 @@ This [Laravel Nova](https://nova.laravel.com) allows you to make any input field
 ## Known non-working fields
 
 - `Image` and `File`
-  - Workarounds:
-    - [optimistdigital/nova-media-field](https://github.com/optimistdigital/nova-media-field)
-    - [ebess/advanced-nova-media-library](https://github.com/ebess/advanced-nova-media-library)
-    - Or any library that uploads images/files using XHR
 
 ## Limitations
 
@@ -88,7 +81,7 @@ To do so, add the `->rulesFor()` on your field and the `HandlesTranslatable` tra
 `->rulesFor` accepts `array|string|callable` locales and `array|callable` rules.
 
 ```php
-use OptimistDigital\NovaTranslatable\HandlesTranslatable;
+use KraenkVisuell\NovaAstrotranslatable\HandlesTranslatable;
 
 class Product extends Resource
 {

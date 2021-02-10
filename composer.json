@@ -1,6 +1,6 @@
 {
-  "name": "optimistdigital/nova-translatable",
-  "description": "A laravel-translatable extension for Laravel Nova.",
+  "name": "kraenkvisuell/nova-astrotranslatable",
+  "description": "A Astrotomic Translatable extension for Laravel Nova.",
   "keywords": [
     "laravel",
     "nova",
@@ -10,31 +10,30 @@
   ],
   "authors": [
     {
-      "name": "Tarvo Reinpalu",
-      "email": "tarvoreinpalu@gmail.com",
-      "role": "Developer"
+      "name": "Optimist Digital",
+      "homepage": "https://github.com/optimistdigital"
     },
     {
-      "name": "Optimist Digital",
-      "email": "info@optimistdigital.com",
-      "role": "Maintainer"
+      "name": "Kraenk Visuell",
+      "homepage": "https://github.com/kraenkvisuell"
     }
   ],
   "license": "MIT",
   "require": {
-    "php": ">=7.1.0",
+    "php": "^7.4|^8.0",
+    "astrotomic/laravel-translatable": "^11.5",
     "laravel/nova": "^2.9 || ^3.0",
-    "spatie/laravel-translatable": "^4.0"
+    "spatie/laravel-ray": "^1.12"
   },
   "autoload": {
     "psr-4": {
-      "OptimistDigital\\NovaTranslatable\\": "src/"
+      "KraenkVisuell\\NovaAstrotranslatable\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "OptimistDigital\\NovaTranslatable\\FieldServiceProvider"
+        "KraenkVisuell\\NovaAstrotranslatable\\FieldServiceProvider"
       ]
     }
   },

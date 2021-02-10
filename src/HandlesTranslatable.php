@@ -1,6 +1,6 @@
 <?php
 
-namespace OptimistDigital\NovaTranslatable;
+namespace KraenkVisuell\NovaAstrotranslatable;
 
 use Laravel\Nova\Http\Requests\NovaRequest;
 
