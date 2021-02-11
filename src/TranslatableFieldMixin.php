@@ -102,9 +102,20 @@ class TranslatableFieldMixin
             $this->fillUsing(function ($request, $model, $attribute, $requestAttribute) use ($locales) {
                 $realAttribute = FieldServiceProvider::normalizeAttribute($this->meta['translatable']['original_attribute'] ?? $attribute);
                 $translations = $request->{$realAttribute};
-                foreach ($locales as $localeKey => $localeName) {
-                    $model->translate($localeKey)->{$realAttribute} = $translations[$localeKey];
+                
+                if($request->editMode == 'create') {
+                    
+                    foreach ($locales as $localeKey => $localeName) {
+                        $translationEntry = $model->translateOrNew($localeKey);
+
+                        $translationEntry->{$realAttribute} = $translations[$localeKey];
+                    }
+                } else {
+                    foreach ($locales as $localeKey => $localeName) {
+                        $model->translate($localeKey)->{$realAttribute} = $translations[$localeKey];
+                    }
                 }
+                
             });
 
             return $this;
