@@ -103,19 +103,11 @@ class TranslatableFieldMixin
                 $realAttribute = FieldServiceProvider::normalizeAttribute($this->meta['translatable']['original_attribute'] ?? $attribute);
                 $translations = $request->{$realAttribute};
                 
-                if($request->editMode == 'create') {
-                    
-                    foreach ($locales as $localeKey => $localeName) {
-                        $translationEntry = $model->translateOrNew($localeKey);
+                foreach ($locales as $localeKey => $localeName) {
+                    $translationEntry = $model->translateOrNew($localeKey);
 
-                        $translationEntry->{$realAttribute} = $translations[$localeKey];
-                    }
-                } else {
-                    foreach ($locales as $localeKey => $localeName) {
-                        $model->translate($localeKey)->{$realAttribute} = $translations[$localeKey];
-                    }
+                    $translationEntry->{$realAttribute} = $translations[$localeKey];
                 }
-                
             });
 
             return $this;
