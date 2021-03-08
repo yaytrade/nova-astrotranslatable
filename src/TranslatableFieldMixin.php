@@ -28,7 +28,7 @@ class TranslatableFieldMixin
                         $allTranslations = $resource->getTranslationsArray();
                         $value = [];
                         foreach ($locales as $localeKey => $localeName) {
-                            $value[$localeKey] = $allTranslations[$localeKey][$attribute];
+                            $value[$localeKey] = $allTranslations[$localeKey][$attribute] ?? null;
                         }
                     } catch (Exception $e) {
                         $value = [];
