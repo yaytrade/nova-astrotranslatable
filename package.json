@@ -16,7 +16,7 @@
     "prettier": "^2.7.1",
     "sass": "^1.54.8",
     "sass-loader": "^13.0.2",
-    "vue-loader": "^16.8.3"
+    "vue-loader": "^17.0.0"
   },
   "dependencies": {}
 }
