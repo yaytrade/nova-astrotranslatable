@@ -104,7 +104,9 @@ class Product extends Resource
     }
 }
 ```
+
 #### In this example, rules will be added to the following values
+
 ```dotenv
 max: name.*
 required: name.en

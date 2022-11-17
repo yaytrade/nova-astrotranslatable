@@ -7,9 +7,9 @@ mix
   .webpackConfig({
     externals: {
       vue: 'Vue',
-      'laravel-nova': 'LaravelNova'
+      'laravel-nova': 'LaravelNova',
     },
     output: {
       uniqueName: 'outl1ne/nova-translatable',
     },
-  })
+  });
