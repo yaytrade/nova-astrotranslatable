@@ -23,7 +23,7 @@ class FieldServiceProvider extends ServiceProvider
         });
 
         // Register mixin
-        Field::mixin(new TranslatableFieldMixin);
+        Field::mixin(new TranslatableFieldMixin());
     }
 
     protected static function isValidLocaleArray($localeArray)
@@ -33,12 +33,20 @@ class FieldServiceProvider extends ServiceProvider
 
     public static function getLocales($overrideLocales = null)
     {
-        if (is_callable($overrideLocales)) $overrideLocales = call_user_func($overrideLocales);
-        if (static::isValidLocaleArray($overrideLocales)) return $overrideLocales;
+        if (is_callable($overrideLocales)) {
+            $overrideLocales = call_user_func($overrideLocales);
+        }
+        if (static::isValidLocaleArray($overrideLocales)) {
+            return $overrideLocales;
+        }
 
         $configuredLocales = config('nova-translatable.locales', ['en' => 'English']);
-        if (is_callable($configuredLocales)) $configuredLocales = call_user_func($configuredLocales);
-        if (static::isValidLocaleArray($configuredLocales)) return $configuredLocales;
+        if (is_callable($configuredLocales)) {
+            $configuredLocales = call_user_func($configuredLocales);
+        }
+        if (static::isValidLocaleArray($configuredLocales)) {
+            return $configuredLocales;
+        }
 
         return ['en' => 'English'];
     }
@@ -46,7 +54,9 @@ class FieldServiceProvider extends ServiceProvider
     public static function normalizeAttribute($attribute)
     {
         if (in_array(request()->method(), ['PUT', 'POST'])) {
-            if (substr($attribute, -2) === '.*') $attribute = substr($attribute, 0, -2);
+            if (substr($attribute, -2) === '.*') {
+                $attribute = substr($attribute, 0, -2);
+            }
         }
         return $attribute;
     }
