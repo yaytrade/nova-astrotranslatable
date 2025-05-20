@@ -23,7 +23,7 @@
     "php": ">=8.0",
     "astrotomic/laravel-translatable": "^11.5",
     "laravel/nova": "^4.12",
-    "nova-kit/nova-packages-tool": "^1.0"
+    "nova-kit/nova-packages-tool": "^2.0"
   },
   "autoload": {
     "psr-4": {
